@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="script" href="script.js">
+
+    <style>
+        body
+        {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: 'Times New Roman', Times, serif;
+            box-sizing: border-box;
+            background-image: url(img/moon.jpg);
+            background-size: cover;
+            background-position: center center;
+            color:white;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #dddddd;
+            border-radius: 20px;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(201, 200, 200, 0.5);
+            max-width: 400px;
+            width: 100%;
+            backdrop-filter:blur(10px);
+        }
+        label {
+            display: block;
+            margin-bottom: 15px;
+            font-weight: bold;
+            font-size: 20px;
+
+        }
+
+        input{
+            margin-bottom: 15px;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            transition: border-color 0.3s;
+        }
+
+        .button {
+
+            margin-top: 20px;
+            margin-bottom: 5px;
+            background-color: white;
+            color: black ;
+            padding: 12px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            max-width: 150px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        h1{
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+   
+    <h1> Login and rediscover!</h1>
+
+    <form id="register" onsubmit="return validateForm()" method="post"> 
+        <label for="name">UserName:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="pswd">Password:</label>
+        <input type="password" id="pswd" name="password" required>
+
+        
+        <input type="submit" value="Login" class="button">
+    </form>
+
+    <script>
+        const welcomeMessage = "<%= typeof username !== 'undefined' ? 'Welcome ' + username : '' %>";
+    
+    // Check if the welcome message is not empty and the username is defined
+    if (welcomeMessage && typeof username !== 'undefined') {
+        // Display the welcome message in an alert box
+        alert("Registered Successfully\n"+welcomeMessage);
+    }
+
+    </script>
+</body>
+</html>

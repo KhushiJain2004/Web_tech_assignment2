@@ -1,0 +1,106 @@
+<!-- booking.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Tour</title>
+    <!-- <link rel="stylesheet" href="./styles.css"> -->
+    <style>
+    body
+    {
+        font-family:'Times New Roman', Times, serif ;
+
+    }
+    .navbar
+{
+    position:fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding:30px; */
+    /* position:fixed; */
+    width:100%;
+    top:0;
+    z-index: 500;
+    height:8%;
+    /* position:fixed; */
+    /* top:0; */
+    left:0;
+    /* width:100%; */
+    box-sizing: border-box;
+    /* z-index: 1000; */
+    height:8%;
+    /* background-attachment: fixed;; */
+    background-color: #f4f4f4;
+    padding:40px;
+    /* box-sizing: border-box; */
+    padding-top: 40px;
+
+}
+.navbar ul{
+    list-style: none;
+    display: flex;
+    justify-content:space-between;
+    font-size: 20px;
+}
+.navbar li{
+    padding-right: 60px;
+    color:black;
+    font-size: 20px;
+}
+.navbar a,h3{
+    color:black;
+    font-size: 22px;
+}
+.navbar a{
+    text-decoration: none;
+    /* color:white; */
+    font-weight: bold;
+}
+.main
+{
+    margin-top: 7rem;
+    /* margin:auto; */
+    text-align: center;
+    border: 1px solid #fff
+
+}
+    </style>
+</head>
+<body> 
+   
+        <nav class="navbar" id="navbar">
+            <h3> ASTRO TOUR</h3>
+            <ul >
+                <li><a href="/">HOME</a></li>
+                <li><a href="#about">ABOUT US</a></li>
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="#contact">CONTACT US</a></li>
+                <li><a href="/login" >LOGIN</a></li>
+            </ul>
+        </nav>
+    <div class="main">
+    <h1><%= tour.name %></h1>
+    <div class="tour-details">
+        <div class="tour-images">
+            <!-- Display tour images -->
+                <img src="<%= tour.image %>" alt="<%= tour.name %>">
+        </div>
+        <div class="tour-description">
+            <h2>Tour Details</h2>
+            <p><strong>Duration:</strong> <%= tour.duration %> days</p>
+            <p><strong>Price:</strong> <%= tour.price %></p>
+            <p><strong>Inclusions:</strong></p>
+            <ul>
+                <% tour.inclusions.forEach(inclusion => { %>
+                    <li><%= inclusion %></li>
+                <% }); %>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+    </form>
+</body>
+</html>     

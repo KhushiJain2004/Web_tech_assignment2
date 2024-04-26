@@ -1,0 +1,92 @@
+<!-- stargazing.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./stargazing.css">
+    <style>
+        .services h1{
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar and main container -->
+    <nav class="navbar" id="navbar">
+        <h3> ASTRO TOUR</h3>
+        <ul >
+            <li><a href="/">HOME</a></li>
+            <li><a href="#about">ABOUT US</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#contact">CONTACT US</a></li>
+            <li><a href="/login" >LOGIN</a></li>
+        </ul>
+    </nav>
+    <div class="main_container">
+        <!-- Welcome section -->
+        <div class="welcome">
+            <h1>Stargazing Tours</h1>
+            <p>Discover the wonders of the night sky with our stargazing tours to some of the world's best destinations for astronomy enthusiasts.</p>
+        </div>
+
+        <!-- Tour cards section -->
+        <div class="services">
+            <!-- <           -->
+            <div class="container">
+                <% tours.forEach(tour => { %>
+                    <div class="cardcontainer">
+                        <a href="/booking/<%= tour._id %>">
+                            <img src="<%= tour.image %>" alt="<%= tour.name %>" class="cardimage">
+                            <div class="cardtext">
+                                <h2><%= tour.name %></h2>
+                                <p>Duration: <%= tour.duration %> Days</p>
+                                <p>Price: <%= tour.price %> USD</p>
+                                <a class="button" href="/booking/<%= tour._id %>" data-tourId="<%= tour._id %>">Book Now!</a>
+                                <!-- <button class="button add-to-wishlist" data-tourName="<%= tour.name %>">Add to Wishlist</button> -->
+                            </div>
+                        </a>
+                    </div>
+                <% }); %>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script for handling button click -->
+    <script>
+        // document.querySelectorAll('.book-now').forEach(button => {
+        //     button.addEventListener('click', function() {
+        //         const tourId = this.dataset.tourid;
+        //         window.location.href = `/booking/${tourId}`;
+        //     });
+        // });
+        // Client-side JavaScript
+// document.querySelector('.save-tour').addEventListener('click', function() {
+//     const tourName = this.dataset.tourname;
+
+//     fetch('/wishlist', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json'
+//         },
+//         body: JSON.stringify({ tourName: tourName })
+//     })
+//     .then(response => {
+//         if (response.ok) {
+//             alert('Tour added to wishlist!');
+//         } else {
+//             alert('Failed to add tour to wishlist!');
+//         }
+//     })
+//     .catch(error => {
+//         console.error('Error adding tour to wishlist:', error);
+//         alert('Error adding tour to wishlist!');
+//     });
+// });
+
+        
+    </script>
+</body>
+</html>

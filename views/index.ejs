@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main">
+        <nav class="navbar" id="navbar">
+            <h3> ASTRO TOUR</h3>
+            <ul >
+                <li><a href="/">HOME</a></li>
+                <li><a href="#about">ABOUT US</a></li>
+                <li><a href="#services">SERVICES</a></li>
+                <!-- <li><a href="#contact">CONTACT US</a></li> -->
+                <li><a href="/login" >LOGIN</a></li>
+            </ul>
+        </nav>
+
+        <div class="text">
+            <p class="p1">EXPERIENCE THE MAGIC OF STARS!</p>
+            <P class="p2">From stargazing in dark sky parks to chasing meteor showers,we have it all!</P>
+           <button onclick="window.location.href='/register'" >REGISTER NOW</button>
+        </div>
+
+    </div>
+    <div class="about" id="about">
+        <div class="aboutimg">
+        </div>
+        <div class="aboutinfo">
+            <div class="box">
+                <h2>COSMIC TRAILS: Explore the cosmos with us!</h2>
+            <p>ASTRO TOUR is your guide to celestial adventures. 
+                Our passion for astronomy fuels our mission to inspire
+                 wonder and curiosity about the universe. Join us on 
+                 unforgettable journeys through the cosmos, where every
+                  star has a story to tell and every journey is an adventure.
+                  Welcome to Cosmic Trails – let's explore together!
+                </p>
+            
+            </div>
+        </div>
+    </div>
+
+    <div class="services" id="services">
+        <h1 style="color:white ">OUR MOST POPULAR CATEGORIES</h1>
+        <div class="container">
+            <div class="cardcontainer">
+                <a href="/stargazing">
+                    <img src="img/astro7.jpg" alt="" class="cardimage">
+                <div class="cardtext">
+                    <p>STARGAZING TOURS</p>
+                </div>
+                </a>
+            </div>
+            <div class="cardcontainer">
+                <img src="img/astro6.jpg" alt="" class="cardimage">
+               <div class="cardtext">
+                <p>METEOR SHOWER CAMPOUTS</p>
+               </div>
+            </div>
+            <div class="cardcontainer">
+                <img src="img/obser.jpg" alt="" class="cardimage">
+                <div class="cardtext">
+                    <p>SPACE EXPLORATION</p>
+                </div>
+            </div>
+            <div class="cardcontainer">
+                <img src="img/aurora.jpg" alt="" class="cardimage">
+                <div class="cardtext">
+                    <p>AURORA BOREALIS ADVENTURES</p>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+
+
+
+    <script>
+        window.onscroll = function() {scrollFunction()};
+    
+        function scrollFunction() {
+            var navbar = document.getElementById("navbar");
+            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+                navbar.style.padding = "10px 30px";
+            } else {
+                navbar.style.padding = "30px";
+            }
+        }
+    // const welcomeMessage = "<%= typeof username !== 'undefined' ? 'Welcome ' + username : '' %>";
+    
+    // // Check if the welcome message is not empty and the username is defined
+    // if (welcomeMessage !== 'undefined') {
+    //     // Display the welcome message in an alert box
+    //     alert("Login Successfull\n"+welcomeMessage);
+    // }
+
+    </script>
+    
+</body>
+</html>

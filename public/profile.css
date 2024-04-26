@@ -1,0 +1,64 @@
+/* profile.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+main {
+    padding: 2rem;
+}
+
+.profile-info {
+    margin-bottom: 2rem;
+}
+
+.profile-info h2 {
+    margin-bottom: 1rem;
+}
+
+.profile-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.profile-info ul li {
+    margin-bottom: 0.5rem;
+}
+
+.booking-history h2 {
+    margin-bottom: 1rem;
+}
+
+.booking-history ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.booking-history ul li {
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

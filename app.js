@@ -36,7 +36,7 @@ const userSchema = new mongoose.Schema({
 const User = mongoose.model('User', userSchema);
 
 // Connect to MongoDB Atlas
-mongoose.connect('mongodb+srv://kj866795:LLCRlbvOJCFXkJjd@cluster0.hah8tdn.mongodb.net/web_tech', {
+mongoose.connect('mongodb+srv://<username>:<password>@cluster0.hah8tdn.mongodb.net/web_tech', {
 //   useNewUrlParser: true,
 //   useUnifiedTopology: true
 }).then(() => {
